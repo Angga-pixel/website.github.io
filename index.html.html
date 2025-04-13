@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+          <style>
+            body {
+              margin: 0;
+              font-family: sans-serif;
+            }
+        
+            .menu-toggle {
+              font-size: 24px;
+              padding: 10px 15px;
+              background-color: hwb(164 6% 59%);
+              color: white;
+              border: none;
+              position: fixed;
+              top: 10px;
+              left: 10px;
+              z-index: 1001;
+              cursor: pointer;
+            }
+        
+            .sidebar {
+              height: 100%;
+              width: 250px;
+              background-color: #1f4b3f;
+              color: white;
+              position: fixed;
+              top: 0;
+              left: -250px;
+              transition: 0.3s;
+              padding-top: 60px;
+              z-index: 1000;
+            }
+        
+            .sidebar.active {
+              left: 0;
+            }
+        
+            .sidebar a {
+              display: block;
+              padding: 15px 25px;
+              color: white;
+              text-decoration: none;
+              font-size: 18px;
+            }
+        
+            .sidebar a:hover {
+              background-color: #286a55;
+            }
+        
+            .close-btn {
+              position: absolute;
+              top: 15px;
+              right: 20px;
+              font-size: 24px;
+              cursor: pointer;
+            }
+        
+            .content {
+              padding: 80px 20px;
+            }
+          </style>
+        </head>
+        <body>
+        
+        <!-- Tombol buka menu -->
+        <button class="menu-toggle" onclick="openMenu()">☰</button>
+        
+        <!-- navigasi -->
+        <div class="sidebar" id="sidebarMenu">
+          <span class="close-btn" onclick="closeMenu()">×</span>
+          <a href="#home" style="color: white; margin: 0 10px; text-decoration: none;">Beranda</a>
+        <a href="#about" style="color: white; margin: 0 10px; text-decoration: none;">Tentang</a>
+        <a href="#services" style="color: white; margin: 0 10px; text-decoration: none;">Layanan</a>
+        <a href="#contact" style="color: white; margin: 0 10px; text-decoration: none;">Kontak</a>
+        </div>
+        
+        <!-- Konten utama -->
+    </style>
+    <!-- Header -->
+    <header style="background-color: hwb(132 3% 66%); color: white; text-align: center; padding: 20px;">
+        <h1>Belajar Membuat Landing Page</h1>
+        <p>Pelatihan HTML</p>
+    </header>
+        
+        <!-- Script -->
+        <script>
+          function openMenu() {
+            document.getElementById("sidebarMenu").classList.add("active");
+          }
+        
+          function closeMenu() {
+            document.getElementById("sidebarMenu").classList.remove("active");
+          }
+        </script>
+        
+        </body>
+        </html>
+        </title>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="home" style="text-align: center; padding: 50px 20px; background-color: #f0f0f0;">
+        <h2>Selamat Datang di Pelatihan Kami</h2>
+        <p>Mari belajar membuat website sederhana dengan HTML dasar</p>
+        <button style="background-color: #2d6a4f; color: white; border: none; padding: 10px 20px; margin-top: 20px;">Mulai Belajar</button>
+    </section>
+
+    <!-- Tentang -->
+    <section id="about" style="padding: 30px 20px; text-align: center;">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah penyedia pelatihan pemrograman web untuk pemula yang ingin memulai karir di bidang teknologi.</p>
+        
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 20px;
+            }
+        
+            .fitur-container {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              text-align: center;
+              gap: 30px;
+            }
+        
+            .fitur-box {
+              flex: 1 1 200px;
+              max-width: 250px;
+              padding: 20px;
+            }
+        
+            .fitur-box img {
+              width: 50px;
+              margin-bottom: 10px;
+            }
+        
+            .fitur-box h3 {
+              margin: 10px 0 5px;
+            }
+        
+            .fitur-box p {
+              color: #333;
+            }
+        
+            @media (max-width: 768px) {
+              .fitur-container {
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+          </style>
+        </head>
+        <body>
+        
+          <div class="fitur-container">
+            <div class="fitur-box">
+              <img src="https://img.icons8.com/ios-filled/50/000000/book.png" alt="Mudah Dipahami">
+              <h3>Mudah Dipahami</h3>
+              <p>Materi disampaikan dengan bahasa yang sederhana dan contoh nyata yang relevan.</p>
+            </div>
+            <div class="fitur-box">
+              <img src="https://img.icons8.com/ios-filled/50/000000/laptop.png" alt="Praktik Langsung">
+              <h3>Praktik Langsung</h3>
+              <p>Belajar sambil langsung mempraktikkan kode dengan panduan interaktif.</p>
+            </div>
+            <div class="fitur-box">
+              <img src="https://img.icons8.com/ios-filled/50/000000/gift.png" alt="Gratis">
+              <h3>Gratis</h3>
+              <p>Akses semua materi kursus tanpa biaya. Pendidikan berkualitas untuk semua orang.</p>
+            </div>
+          </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="services" style="background-color: #f0f0f0; padding: 30px 20px; text-align: center;">
+        <h2>Layanan Kami</h2>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 20px;
+            }
+        
+            .fitur-container {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              text-align: center;
+              gap: 30px;
+            }
+        
+            .fitur-box {
+              flex: 1 1 200px;
+              max-width: 250px;
+              padding: 20px;
+            }
+        
+            .fitur-box img {
+              width: 50px;
+              margin-bottom: 10px;
+            }
+        
+            .fitur-box h3 {
+              margin: 10px 0 5px;
+            }
+        
+            .fitur-box p {
+              color: #333;
+            }
+        
+            @media (max-width: 768px) {
+              .fitur-container {
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+          </style>
+        </head>
+        <body>
+        
+          <div class="fitur-container">
+            <div class="fitur-box">
+              <img src="https://img.icons8.com/ios-filled/50/000000/book.png" alt="Mudah Dipahami">
+              <h3>materi 1</h3>
+              <p>Pelajari lebih lanjut tentang HTML di 
+                <a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a>.
+              </p>
+            </div>
+            <div class="fitur-box">
+              <img src="https://img.icons8.com/ios-filled/50/000000/book.png" alt="Praktik Langsung">
+              <h3>materi 2</h3>
+              <p>Belajar sambil melihat video mempraktikkan kode dengan panduan interaktif.</p>
+              <a href="https://www.youtube.com/watch?v=0oA1Z6UKM5M&pp=ygUTdmlkZW8gdHV0b3JpYWwgaHRtbA%3D%3D" target="_blank">HTML Tutorial</a>.
+              </p>
+            </div>
+          </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section style="padding: 30px 20px; text-align: center;">
+        <h2>Apa Kata Peserta</h2>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div style="margin: 10px; padding: 20px; border: 1px solid #ddd; width: 250px;">
+                <p>"Pelatihannya sangat mudah dipahami untuk pemula seperti saya."</p>
+                <p><strong>- Budi, Mahasiswa</strong></p>
+            </div>
+            <div style="margin: 10px; padding: 20px; border: 1px solid #ddd; width: 250px;">
+                <p>"Materinya praktis dan langsung bisa diaplikasikan."</p>
+                <p><strong>- Ani, Guru</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" style="background-color: #2d6a4f; color: white; padding: 30px 20px; text-align: center;">
+        <h2>Hubungi Kami</h2>
+        <p>Email: 202451191@std.umk.ac.id</p>
+        <p>Telepon: (021) 123-4567</p>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2025 Pelatihan HTML Dasar. Semua hak dilindungi. Made with by Dwi Setya Angga</p>
+    </footer>
+</body>
+</html>
